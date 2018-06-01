@@ -1,0 +1,23 @@
+<div class="margin-top-15">
+  <app-search-box
+    [columnDefs]="columnDefs"
+    (search)="onSearchGrid($event)">
+  </app-search-box>
+
+  <ag-grid-angular
+    style="height: 500px"
+    class="ag-theme-balham margin-top-15"
+    [gridOptions]="gridOptions"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [frameworkComponents]="frameworkComponents"
+    [context]="context"
+    (cellValueChanged)="cellValueChanged()">
+  </ag-grid-angular>
+
+  <div class="margin-top-15">
+    <button *ngIf="isEditing" class="btn btn-primary pull-right margin-left-15" (click)="save()">Save</button>
+    <button *ngIf="isEditing" class="btn btn-default pull-right" (click)="isEditing = false">Cancel</button>
+    <button *ngIf="!isEditing" class="btn btn-default pull-right" (click)="addNewLine()">Add</button>
+  </div>
+</div>

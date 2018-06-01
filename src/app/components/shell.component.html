@@ -1,0 +1,12 @@
+<div class="col-md-12 margin-top-15">
+  <button class="btn btn-default" (click)="setDataOne()">Data Set 1</button>
+  <button class="btn btn-default" (click)="setDataTwo()">Data Set 2</button>
+
+  <app-base
+    [gridOptions]="gridOptions"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [frameworkComponents]="frameworkComponents"
+    [context]="context">
+  </app-base>
+</div>
