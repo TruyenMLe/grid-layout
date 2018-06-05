@@ -34,7 +34,7 @@ export class ShellComponent implements OnDestroy {
   setDataOne() {
     this.gridOptions.rowHeight = 25;
     this.columnDefs = [
-      {headerName: 'Name', field: 'fullName', editable: true},
+      {headerName: 'Name', field: 'fullName', editable: true, sort: 'asc', sortingOrder: ['asc', 'desc']},
       {
         headerName: 'Departments',
         field: 'departments',
